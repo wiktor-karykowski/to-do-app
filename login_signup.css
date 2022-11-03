@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Pacifico&display=swap');
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 0;
+}
+
+html{
+        overflow: -moz-scrollbars-vertical;
+        overflow-y: scroll;
+        scroll-behaviour: smooth;
+}
+
+
+body{
+	display: grid;
+	grid-template-rows: 16% 84%;
+	background-color: #FAF0CA;
+	height: 100vh;
+	margin: auto;
+	font-family: 'Lato', sans-serif;
+}
+
+input{
+	margin-top: 10px;
+	background: none;
+	border: none;
+	border-bottom: 1px solid black;
+	border-radius: 0;
+	outline: none;
+	width: 20%;
+	color: black;
+}
+
+input:focus{
+	border-bottom: 2px solid black;
+}
+
+input[type=submit]{
+	border: 1px solid black;
+	border-radius: 50px;
+	padding: 5px 15px;
+	width: auto;
+}
+
+input::placeholder{
+        color: black;
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+        opacity: 0.75;
+}
+
+.logo{
+	grid-row: 1/2;
+	background-color: #2E2F5B;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.logo a{
+	color: #F4D35E;
+	text-decoration: none;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+	font-family: 'Pacifico', cursive;
+	font-size: 1.5rem;
+}
+
+.content{
+	grid-row: 2/3;
+	margin-top: 1%;
+	background-color: #FAF0CA;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.content form{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;	
+}
+
+.content .message{
+	color: red;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.content .message-box .error{
+	color: red;
+}
+
+.content .message-box .mess{
+	color: green;
+}
+
+@media screen and (max-width: 768px){
+
+	input{
+		width: 50%;
+		border-radius: 0;
+	}
+
+	input[type=submit]{
+		border: 1px solid black;
+		border-radius: 50px;
+		padding: 5px 15px;
+		width: 25%;
+	}
+
+	.content .motd{
+		text-align: center; 
+		width: 90%;
+	}
+}
