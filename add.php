@@ -28,10 +28,11 @@ if(!isset($_SESSION['user'])){
 		<input type="checkbox" id="icon">
 		<label class="mini-logo"><a href="main.php">To-Do App</a></label>
 	  	<div class="nav">
-			<a href="add.php" class="tile tile1">Dodaj rzecz do zrobienia</a>
-			<a href="ticket.php" class="tile tile2">Zgłoś błąd</a>
-			<a href="account.php" class="tile tile3">Ustawienia</a>
-			<a href="logout.php" class="tile tile4" id="logout">Wyloguj się</a>
+	  		<a href="main.php" class="tile tile1">Strona główna</a>
+			<a href="add.php" class="tile tile2">Dodaj rzecz do zrobienia</a>
+			<a href="ticket.php" class="tile tile3">Zgłoś błąd</a>
+			<a href="account.php" class="tile tile4">Ustawienia</a>
+			<a href="logout.php" class="tile tile5" id="logout">Wyloguj się</a>
 		</div>
 	</div>
 	<div class="content" id="content">
@@ -43,7 +44,10 @@ if(!isset($_SESSION['user'])){
 			<input type="date" name="date"><br>
 			<label for="time">O której?</label><br>
 			<input type="time" name="time"><br>
-			<input type="submit" value="Zrobię!"><br>
+			<div class="buttons">
+				<input type="submit" value="Zrobię!">
+				<input type="reset" value="Anuluj">
+			</div>
 		</form>
 		<div class="message-box">
 			<?php
